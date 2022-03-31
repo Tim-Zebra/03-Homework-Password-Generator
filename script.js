@@ -20,16 +20,44 @@ function generatePassword() {
   var numberBoolean = false;
   var specialBoolean = false;
 
-  // User input confirming character types to include and storing the response: 
+  // User input confirming character types to include and storing the response:
+  // Followed by selection validation 
   lowerBoolean = window.confirm("Do you want lowercase chacaters in password?")
-  upperBoolean = window.confirm("Do you want uppercase chacaters in password?")
-  numberBoolean = window.confirm("Do you want number chacaters in password?")
-  specialBoolean = window.confirm("Do you want special chacaters in password?")
+  if (lowerBoolean) {
+    window.alert("Your password will include lowercase characters.")
+  }
+  else {
+    window.alert("Your password will NOT include lowercase characters.")
+  }
 
-  // If all criteria (not including character) = false display alert "Must select Criteria. Please select Generate again" return;
+  upperBoolean = window.confirm("Do you want uppercase chacaters in password?")
+  if (upperBoolean) {
+    window.alert("Your password will include uppercase characters.")
+  }
+  else {
+    window.alert("Your password will NOT include uppercase characters.")
+  }
+
+  numberBoolean = window.confirm("Do you want number chacaters in password?")
+  if (numberBoolean) {
+    window.alert("Your password will include number characters.")
+  }
+  else {
+    window.alert("Your password will NOT include number characters.")
+  }
+
+  specialBoolean = window.confirm("Do you want special chacaters in password?")
+  if (specialBoolean) {
+    window.alert("Your password will include special characters.")
+  }
+  else {
+    window.alert("Your password will NOT include special characters.")
+  }
+
+  // If all criteria (not including character) = false display alert "Must select Criteria. Please select Generate again"
   if(!lowerBoolean && !upperBoolean && !numberBoolean && !specialBoolean) {
     window.alert("Must select at least one criteria. Please select 'Generate Password' to try again.");
-    return;
+    return 'No values selected. Please try "Generate Password" again.';
   }
 
   // prompts for how many characters and stores that value
