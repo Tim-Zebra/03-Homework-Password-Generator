@@ -38,13 +38,35 @@ specialBoolean = window.confirm("Do you want special chacaters in password?") */
 } */
 
 // prompts for how many characters and stores that value
-var charNumber = 0;
+/* var charNumber = 0;
 charNumber = window.prompt("How many characters would you like your password to be?\n Please enter any whole number value between 8-128:");
+*/
+
+// password Generation
+var password = '';
+// pseudovariables to test
+var charNumber = 20;
+// Adds Prompt variables in random order, and continues while the password length is not met
+while (password.length < charNumber)
+{
+  // Randomly selects between all four variables, taking into account user confirmation
+  // If variable is selected appropriately, then a random character of that variable type is added to the password.
+  var randomSelector = Math.floor(Math.random() * 4);
+  if(randomSelector === 0 && lowerBoolean) {
+    password += 
+  }
+  else if(randomSelector === 0 && upperBoolean) {
+    password += 
+  }
+  else if(randomSelector === 0 && numberBoolean) {
+    password += Math.floor(Math.random()*10);
+    // May have to add .toString();
+  }
+  else if(randomSelector === 0 && specialBoolean) {
+    password += 
+  }
+  console.log(password);
+}
 
 
-
-
-
-
-// password is generated appliyng the boolean statements
 }
