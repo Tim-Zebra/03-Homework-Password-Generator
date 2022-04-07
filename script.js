@@ -63,7 +63,9 @@ function generatePassword() {
   // prompts for how many characters and stores that value
   var charNumber = 0;
   charNumber = window.prompt("How many characters would you like your password to be?\n Please enter any whole number value between 8-128:");
-
+  while (charNumber < 8 || charNumber > 128) {
+    charNumber = window.prompt("Try again.\n Please enter any whole number value between 8-128:");
+  }
 
   // Password and character variables
   var password = '';
@@ -89,8 +91,6 @@ function generatePassword() {
     else if(randomSelector === 3 && specialBoolean) {
       password += specialString[Math.floor(Math.random()*specialString.length)];
     }
-    console.log(password);
   }
-
-
+  return password;
 }
