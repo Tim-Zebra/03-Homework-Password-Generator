@@ -9,7 +9,7 @@ Click the button 'Generate Password'
 Answer the series of prompts
 
 Website Visual Demo(Gif/video):
-
+https://drive.google.com/file/d/1v6ciXfz-68TCafJk3YzTWafHi9LgVnnG/view
 
 Link to Deployed Page:
 https://tim-zebra.github.io/03-Homework-Password-Generator/
@@ -18,7 +18,7 @@ References:
 None Required
 
 Development Process (See commits for more details):
-Reviewed code
+Reviewed given code
 Created alerts that took in data
 Created a catch to stop if no values chosen or values are outside range
 Created a while loop to generate a password by cross referencing the random character and if the random character had been selected during the prompts
